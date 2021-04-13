@@ -1,9 +1,12 @@
-use extendr_api::*;
+use extendr_api::prelude::*;
 use std::convert::TryFrom;
 
 pub struct LinearModel {
     coefs : Vec<f64>
 }
+
+#[extendr]
+impl LinearModel {}
 
 impl TryFrom<Robj> for LinearModel {
     type Error = Error;
